@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}Products | Eyes of an Addict{% endblock %}
+
+{% block content %}
+<main class="container">
+    <hgroup style="text-align: center; margin: 2rem 0;">
+        <h1>Recovery Tools & Resources</h1>
+        <h2>Created by D. Bailey with 5+ Years Recovery Experience</h2>
+    </hgroup>
+
+    <!-- Featured Product: Recovery Journal -->
+    <section id="featured-journal" style="margin-bottom: 4rem;">
+        <article style="background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%); padding: 2rem; border-radius: 1rem; border: 2px solid #4a90e2;">
+            <div class="grid">
+                <div>
+                    <figure style="margin: 0;">
+                        <img src="{{ url_for('static', filename='images/journal-cover.jpg') }}" alt="30-Day Recovery Journal Cover" style="border-radius: 0.5rem; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);">
+                    </figure>
+                </div>
+                <div>
+                    <hgroup>
+                        <h2 style="color: #2c3e50; margin-bottom: 0.5rem;">30-Day Recovery Journal</h2>
+                        <h3 style="color: #4a90e2; margin-bottom: 1rem;">The First 30 Days - Book 1 of 3</h3>
+                    </hgroup>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">A comprehensive recovery journal specifically designed for people in early recovery. This is the first book in a three-part series, focusing on the critical first 30 days of your recovery journey.</p>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <h4 style="color: #27ae60; margin-bottom: 0.5rem;"><i data-feather="check-circle"></i> What's Inside:</h4>
+                        <ul style="color: #5a6c7d;">
+                            <li>Daily guided prompts for reflection and growth</li>
+                            <li>Recovery milestone tracking</li>
+                            <li>Coping strategies and tools</li>
+                            <li>Peer-tested methods that actually work</li>
+                            <li>Space for personal thoughts and progress</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <span style="background-color: #f39c12; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; font-size: 1.1rem;">COMING SOON</span>
+                    </div>
+                    
+                    <footer>
+                        <a href="{{ url_for('contact') }}" role="button" style="margin-right: 1rem;">Get Notified When Available</a>
+                        <a href="#journal-preview" role="button" class="secondary">Preview Pages</a>
+                    </footer>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Journal Preview Section -->
+    <section id="journal-preview">
+        <hgroup style="text-align: center; margin: 2rem 0;">
+            <h2>Preview Inside the Journal</h2>
+            <h3>See what makes this recovery tool special</h3>
+        </hgroup>
+        
+        <div class="grid">
+            <figure>
+                <img src="{{ url_for('static', filename='images/journal-page1.jpg') }}" alt="Journal Page Example 1" style="border-radius: 0.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <figcaption>Daily reflection prompts</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ url_for('static', filename='images/journal-page2.jpg') }}" alt="Journal Page Example 2" style="border-radius: 0.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <figcaption>Progress tracking tools</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ url_for('static', filename='images/journal-page3.jpg') }}" alt="Journal Page Example 3" style="border-radius: 0.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <figcaption>Coping strategies</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ url_for('static', filename='images/journal-page4.jpg') }}" alt="Journal Page Example 4" style="border-radius: 0.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <figcaption>Personal growth exercises</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Other Products -->
+    <section id="other-products" style="margin-top: 4rem;">
+        <hgroup style="text-align: center; margin: 2rem 0;">
+            <h2>Additional Recovery Resources</h2>
+            <h3>More tools to support your journey</h3>
+        </hgroup>
+        
+        <div class="grid">
+            <article>
+                <figure>
+                    <img src="{{ url_for('static', filename='images/product1.svg') }}" alt="Digital Recovery Tools">
+                </figure>
+                <h3>Digital Recovery Tools</h3>
+                <p>Comprehensive digital resources including affirmations, worksheets, and milestone tracking tools.</p>
+                <footer>
+                    <a href="{{ url_for('contact') }}" role="button">Learn More</a>
+                </footer>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="{{ url_for('static', filename='images/product2.svg') }}" alt="Recovery Merchandise">
+                </figure>
+                <h3>Recovery Pride Merchandise</h3>
+                <p>Inspirational print-on-demand items that celebrate your recovery journey and inspire others.</p>
+                <footer>
+                    <a href="{{ url_for('contact') }}" role="button">Browse Collection</a>
+                </footer>
+            </article>
+        </div>
+    </section>
+
+    <section style="margin-top: 3rem;">
+        <article style="background-color: #f8f9fa; padding: 2rem; border-radius: 0.5rem;">
+            <h3><i data-feather="dollar-sign"></i> Affordable & Accessible</h3>
+            <p>All our products are designed to be accessible to people in recovery. We believe that financial barriers should never prevent someone from accessing recovery resources.</p>
+            
+            <h3><i data-feather="award"></i> Authentic Experience</h3>
+            <p>Every product is created with authentic recovery experience behind it. No corporate wellness - just real tools from someone who's walked the path.</p>
+            
+            <h3><i data-feather="heart"></i> Community Driven</h3>
+            <p>Part of proceeds support community initiatives and peer support programs. When you buy from us, you're investing in the recovery community.</p>
+        </article>
+    </section>
+
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="{{ url_for('contact') }}" role="button">Questions About Products?</a>
+        <a href="{{ url_for('index') }}" role="button" class="secondary">Back to Home</a>
+    </div>
+</main>
+{% endblock %}
