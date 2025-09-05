@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Eyes of an Addict | Recovery Community{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons@4/feather.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <li><strong><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Eyes of an Addict</a></strong></li>
+        </ul>
+        <ul>
+            <li><a href="{{ url_for('index') }}#features">Features</a></li>
+            <li><a href="{{ url_for('products') }}">Shop</a></li>
+            <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+            <li><a href="{{ url_for('contact') }}" role="button">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="container">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'success' if category == 'success' else 'error' }}" style="padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; background-color: {{ '#d4edda' if category == 'success' else '#f8d7da' }}; border: 1px solid {{ '#c3e6cb' if category == 'success' else '#f5c6cb' }};">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Error Message Display -->
+    {% if error_message %}
+        <div class="container">
+            <article style="text-align: center; padding: 2rem;">
+                <h2>Oops!</h2>
+                <p>{{ error_message }}</p>
+                <a href="{{ url_for('index') }}" role="button">Return Home</a>
+            </article>
+        </div>
+    {% endif %}
+
+    <!-- Main Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="container">
+        <small>
+            <a href="https://baileytrends.com" target="_blank">Bailey Trends</a> • 
+            <a href="{{ url_for('index') }}">Eyes of an Addict</a>
+        </small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace()</script>
+</body>
+</html>
