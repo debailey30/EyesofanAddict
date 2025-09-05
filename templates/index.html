@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero -->
+<header class="hero">
+    <h1>Welcome to Eyes of an Addict</h1>
+    <p>A recovery-based community for people in early recovery.</p>
+    <p><a href="{{ url_for('contact') }}" role="button">Join the Community</a></p>
+</header>
+
+<!-- Main -->
+<main class="container">
+    <div class="grid">
+        <section id="features">
+            <hgroup>
+                <h2>Our Offerings</h2>
+                <h3>Built by peers, for peers</h3>
+            </hgroup>
+            <p>Eyes of an Addict is more than a brand — it's a movement. We provide tools, resources, and authentic peer-led support for anyone walking the recovery journey.</p>
+
+            <div class="grid">
+                <article>
+                    <h3><i data-feather="book-open"></i> 30-Day Recovery Journal</h3>
+                    <p>Our flagship recovery tool - a comprehensive journal for the critical first 30 days. Book 1 of a 3-part series.</p>
+                </article>
+
+                <article>
+                    <h3><i data-feather="heart"></i> Recovery Tools</h3>
+                    <p>Digital products created by someone with real recovery experience (5+ years).</p>
+                </article>
+
+                <article>
+                    <h3><i data-feather="shopping-bag"></i> POD Shop</h3>
+                    <p>Unique merchandise and print-on-demand items that inspire recovery pride.</p>
+                </article>
+
+                <article>
+                    <h3><i data-feather="users"></i> Community Support</h3>
+                    <p>Authentic peer-led guidance, affordable coaching, and consulting (coming soon).</p>
+                </article>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="{{ url_for('products') }}" role="button">View Our Products</a>
+                <a href="{{ url_for('faq') }}" role="button" class="secondary">Learn More</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Community Info -->
+<section id="community-info" aria-label="Community Information">
+    <div class="container">
+        <article style="background-color: #f4f4f4; padding: 2rem; border-radius: 0.5rem;">
+            <hgroup>
+                <h2>About Our Founder</h2>
+                <h3>D. Bailey - Certified Peer Recovery Support Specialist</h3>
+            </hgroup>
+            <p>With over 5 years in recovery, D. Bailey brings authentic experience and professional training to support others on their recovery journey. Our community is built on the principle that people with lived experience are uniquely qualified to help others find their path to recovery.</p>
+            
+            <h4>Connect with us:</h4>
+            <ul>
+                <li><a href="https://facebook.com/eyesofanaddict" target="_blank"><i data-feather="facebook"></i> Facebook</a></li>
+                <li><a href="https://instagram.com/eyes_of_an_addict" target="_blank"><i data-feather="instagram"></i> @eyes_of_an_addict</a></li>
+                <li><a href="https://tiktok.com/@eyes_of_a_addict" target="_blank"><i data-feather="video"></i> @eyes_of_a_addict</a></li>
+                <li><a href="https://baileytrends.com" target="_blank"><i data-feather="globe"></i> baileytrends.com</a></li>
+            </ul>
+        </article>
+    </div>
+</section>
+{% endblock %}
