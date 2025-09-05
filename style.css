@@ -1,0 +1,274 @@
+/* Eyes of an Addict - Recovery Community Styles */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", "Roboto", sans-serif;
+}
+
+/* Hero Section */
+header.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e8f4f8 100%);
+    border-radius: 0 0 1rem 1rem;
+}
+
+header.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header.hero h1 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+header.hero p {
+    font-size: 1.2rem;
+    color: #5a6c7d;
+    margin: 1rem 0;
+}
+
+/* Sections */
+section {
+    margin: 3rem 0;
+}
+
+/* Recovery-focused color scheme */
+:root {
+    --recovery-blue: #4a90e2;
+    --recovery-green: #27ae60;
+    --recovery-purple: #8e44ad;
+    --recovery-orange: #f39c12;
+    --recovery-gray: #95a5a6;
+    --recovery-dark: #2c3e50;
+}
+
+/* Navigation with background */
+nav {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav ul li a {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+nav ul li strong a {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation enhancements */
+nav a[role="button"] {
+    background-color: var(--recovery-blue);
+    border-color: var(--recovery-blue);
+}
+
+nav a[role="button"]:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+}
+
+/* Button variations for recovery theme */
+a[role="button"] {
+    transition: all 0.3s ease;
+}
+
+a[role="button"]:not(.secondary) {
+    background-color: var(--recovery-green);
+    border-color: var(--recovery-green);
+}
+
+a[role="button"]:not(.secondary):hover {
+    background-color: #219a52;
+    border-color: #219a52;
+    transform: translateY(-2px);
+}
+
+a[role="button"].secondary {
+    background-color: transparent;
+    border-color: var(--recovery-gray);
+    color: var(--recovery-gray);
+}
+
+a[role="button"].secondary:hover {
+    background-color: var(--recovery-gray);
+    color: white;
+}
+
+/* Article enhancements */
+article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styling */
+[data-feather] {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+h3 [data-feather] {
+    color: var(--recovery-blue);
+}
+
+/* Form styling */
+.form-label {
+    font-weight: 600;
+    color: var(--recovery-dark);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--recovery-blue);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Alert styles */
+.alert {
+    border-radius: 0.5rem !important;
+    margin: 1rem 0 !important;
+    padding: 1rem !important;
+}
+
+.alert-success {
+    background-color: #d4edda !important;
+    border: 1px solid #c3e6cb !important;
+    color: #155724 !important;
+}
+
+.alert-error {
+    background-color: #f8d7da !important;
+    border: 1px solid #f5c6cb !important;
+    color: #721c24 !important;
+}
+
+/* FAQ Details styling */
+details {
+    margin: 1rem 0;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+details summary {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+details summary:hover {
+    background-color: #e9ecef;
+}
+
+details[open] summary {
+    background-color: var(--recovery-blue);
+    color: white;
+}
+
+details p {
+    padding: 1rem;
+    margin: 0;
+    background-color: white;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+}
+
+footer small {
+    color: var(--recovery-gray);
+}
+
+footer a {
+    color: var(--recovery-blue);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Social media links */
+ul li a[href*="facebook.com"] [data-feather] {
+    color: #3b5998;
+}
+
+ul li a[href*="instagram.com"] [data-feather] {
+    color: #e1306c;
+}
+
+ul li a[href*="tiktok.com"] [data-feather] {
+    color: #000000;
+}
+
+ul li a[href*="baileytrends.com"] [data-feather] {
+    color: var(--recovery-purple);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header.hero {
+        padding: 2rem 1rem;
+    }
+    
+    header.hero h1 {
+        font-size: 2rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus indicators for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--recovery-blue);
+    outline-offset: 2px;
+}
