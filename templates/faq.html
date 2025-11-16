@@ -53,4 +53,16 @@
 
     <section style="margin-top: 3rem;">
         <article style="background-color: #e3f2fd; padding: 2rem; border-radius: 0.5rem;">
-            <h3><i data-feather="help
+            <h3><i data-feather="help-circle"></i> Still Have Questions?</h3>
+            <p>Can't find the answer you're looking for? We're here to help! Reach out through our contact form and we'll get back to you as soon as possible.</p>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="{{ url_for('contact') }}" role="button">Contact Us</a>
+            </div>
+        </article>
+    </section>
+
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="{{ url_for('index') }}" role="button" class="secondary">Back to Home</a>
+    </div>
+</main>
+{% endblock %}
